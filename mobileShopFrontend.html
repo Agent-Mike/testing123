@@ -1,0 +1,103 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>samsung mobile shop</title>
+    <style>
+        body {
+            font-family: arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+        }
+        .mobile-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .mobile-card {
+            margin: 20px;
+            padding: 20px;
+            background-color: #ffffff;
+            border: 1px solid #dddddd;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+        }
+        .mobile-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .mobile-card h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .mobile-card p {
+            font-size: 14px;
+            color: #666666;
+        }
+        .mobile-card button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .mobile-card button:hover {
+            background-color: #0069d9;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>samsung mobile shop</h1>
+    </div>
+    <div class="mobile-list">
+        <div class="mobile-card">
+            <img src="samsung-galaxy-s22.jpg" alt="samsung galaxy s22">
+            <h2>samsung galaxy s22</h2>
+            <p>6.2 inches, 128gb, 12gb ram</p>
+            <p>price: $799</p>
+            <button>add to cart</button>
+        </div>
+        <div class="mobile-card">
+            <img src="samsung-galaxy-s22-ultra.jpg" alt="samsung galaxy s22 ultra">
+            <h2>samsung galaxy s22 ultra</h2>
+            <p>6.8 inches, 256gb, 16gb ram</p>
+            <p>price: $999</p>
+            <button>add to cart</button>
+        </div>
+        <div class="mobile-card">
+            <img src="samsung-galaxy-a52.jpg" alt="samsung galaxy a52">
+            <h2>samsung galaxy a52</h2>
+            <p>6.5 inches, 128gb, 4gb ram</p>
+            <p>price: $399</p>
+            <button>add to cart</button>
+        </div>
+        <div class="mobile-card">
+            <img src="samsung-galaxy-note-20.jpg" alt="samsung galaxy note 20">
+            <h2>samsung galaxy note 20</h2>
+            <p>6.7 inches, 256gb, 8gb ram</p>
+            <p>price: $699</p>
+            <button>add to cart</button>
+        </div>
+    </div>
+    <script>
+        const mobilecards = document.queryselectorall('.mobile-card');
+        mobilecards.foreach((card) => {
+            card.addeventlistener('click', () => {
+                alert('you have selected ' + card.queryselector('h2').textcontent);
+            });
+        });
+    </script>
+</body>
+</html>
